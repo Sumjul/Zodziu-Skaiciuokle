@@ -1,7 +1,8 @@
 #include "../include/global.h"
 #include <map>
+#include <set>
 #include <cctype>
-using std::map;
+#include <regex>
 
 int main() {
     ifstream input("tekstas.txt");
@@ -11,13 +12,17 @@ int main() {
     }
     ofstream output("rezultatai.txt");
 
-    map<string, int> wordCount;
+    std::regex front_unwanted(R"(^[\"'„“°.,:;!?()\[\]{}<>]+)");
+    std::regex back_unwanted(R"([\"'„“°.,:;!?()\[\]{}<>]+$)");
+
+    std::map<string, int> wordCount;
     string line;
     while (getline(input, line)) {
         std::istringstream iss(line);
         string word;
         while (iss >> word) {
-            word.erase(std::remove_if(word.begin(), word.end(), [](unsigned char c) { return std::ispunct(c); }), word.end());
+            word = std::regex_replace(word, front_unwanted, "");
+            word = std::regex_replace(word, back_unwanted, "");
             std::transform(word.begin(), word.end(), word.begin(), ::tolower);
             if (!word.empty() && word.length() > 1 && std::any_of(word.begin(), word.end(), ::isalpha))
                 wordCount[word]++;

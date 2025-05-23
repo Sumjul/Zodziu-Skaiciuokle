@@ -6,6 +6,7 @@ akademija : 2
 aldonas : 2
 alyta : 2
 alytus : 2
+amber : 2
 amžiaus : 3
 angl : 3
 ant : 2
@@ -16,9 +17,9 @@ apie : 6
 apskrities : 3
 ar : 2
 arba : 2
-archiveorg : 3
+archive.org : 3
 archyvuota : 6
-arena : 3
+arena : 4
 arkikatedra : 2
 armija : 2
 atnaujinkite : 2
@@ -132,7 +133,7 @@ interaktyvi : 2
 ir : 98
 isbn : 3
 istorija : 3
-iš : 13
+iš : 14
 išlikusi : 2
 ištrinkite : 2
 jas : 2
@@ -146,7 +147,7 @@ jos : 3
 juozapo : 2
 jų : 4
 kad : 3
-kaimo : 3
+kaimo : 4
 kaip : 9
 kalboje : 4
 kalbos : 3
@@ -170,7 +171,7 @@ kiti : 5
 kitos : 3
 kitur : 2
 kitų : 2
-klimatas : 3
+klimatas : 4
 km : 3
 konstantinas : 2
 konstantino : 2
@@ -202,15 +203,16 @@ leidybos : 5
 leidžiasi : 2
 lenkijos : 2
 liepa : 2
-lietuva : 4
+lietuva : 5
 lietuviškoji : 2
 lietuvių : 4
 lietuvoje : 10
-lietuvos : 38
+lietuvos : 41
 lietuvą : 2
 link : 2
 liubarto : 2
 lotynų : 2
+m.sur : 2
 machine : 6
 marija : 2
 marijos : 4
@@ -220,7 +222,7 @@ matomi : 2
 mašinų : 3
 mergelės : 4
 metu : 2
-metų : 5
+metų : 6
 mickevičius : 2
 miestas : 5
 mieste : 7
@@ -241,8 +243,7 @@ mokykla : 11
 mokyklos : 7
 mokymo : 7
 motinos : 5
-msur : 2
-na : 2
+n/a : 2
 nacionalinė : 2
 namai : 3
 namų : 3
@@ -332,7 +333,7 @@ santakoje : 2
 sapiegų : 2
 saugomos : 2
 sausio : 2
-savivaldybė : 4
+savivaldybė : 5
 savivaldybės : 12
 senamiestis : 4
 senamiesčio : 2
@@ -341,6 +342,7 @@ senoji : 4
 senojo : 2
 sentikiai : 3
 sentikių : 2
+siemens : 2
 sietinas : 2
 simonas : 2
 sinagoga : 3
@@ -395,7 +397,7 @@ tiltai : 3
 tiltas : 27
 tiltų : 2
 to : 2
-transportas : 2
+transportas : 3
 transporto : 3
 trijų : 4
 troleibusai : 3
@@ -447,9 +449,9 @@ vilko : 2
 vilna : 5
 vilnelės : 2
 vilnia : 8
-vilniaus : 109
+vilniaus : 111
 vilnios : 5
-vilnis : 3
+vilnis : 4
 vilniui : 2
 vilniuje : 10
 vilnius : 36
@@ -475,7 +477,6 @@ xix : 2
 xv : 3
 xviii : 2
 yra : 39
-°c : 10
 Čia : 3
 Čiurlionis : 2
 čia : 3
@@ -488,7 +489,7 @@ yra : 39
 įtrauktas : 3
 Šeškinės : 3
 Šiame : 2
-Šiaurės : 5
+Šiaurės : 6
 Šv : 15
 Šventosios : 2
 Švč : 7
@@ -499,6 +500,7 @@ yra : 39
 šio : 3
 šios : 2
 šv : 2
+Žalgirio : 2
 Žemiausia : 2
 Žirmūnų : 3
 Žvėryno : 2
@@ -507,7 +509,3 @@ yra : 39
 žodžiu : 2
 žr : 2
 žydų : 6
-„amber : 2
-„lietuvos : 3
-„siemens“ : 2
-„vilniaus : 2
