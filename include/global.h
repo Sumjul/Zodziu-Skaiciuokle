@@ -1,0 +1,33 @@
+#pragma once
+
+#include <vector>
+#include <list>
+#include <deque>
+#include <string>
+#include <limits>
+#include <iomanip>
+#include <algorithm>
+#include <random>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <chrono>
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::vector;
+using std::list;
+using std::deque;
+using std::string;
+using std::ostream;
+using std::ifstream;
+using std::ofstream;
+using std::istream;
+using std::left;
+using std::setw;
+using std::fixed;
+using std::setprecision;
+using std::sort;
+using std::move;
+using std::partition;
