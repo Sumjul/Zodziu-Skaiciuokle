@@ -1,22 +1,22 @@
 #include "../include/global.h"
 #include "../include/links.h"
+#include <unordered_set>
 #include <map>
 #include <set>
 #include <cctype>
 #include <regex>
-#include <unordered_set>
 
 int main()
 {
     // Failu atidarymas ir tikrinimas
-    ifstream input("Tekstas.txt");
+    ifstream input("tekstas.txt");
     if (!input.is_open())
     {
         std::cerr << "Nepavyko atidaryti failo!" << endl;
         return 1;
     }
-    ofstream wordsOutput("Pasikartojimai.txt");
-    ofstream linksOutput("Nuorodos.txt");
+    ofstream wordsOutput("pasikartojimai.txt");
+    ofstream linksOutput("nuorodos.txt");
 
     // Naudojami asociatyvus konteineriai ir regex
     std::unordered_set<string> foundLinks;
@@ -26,7 +26,7 @@ int main()
     std::regex front_unwanted(R"(^[\"'„“°.,:;!?()\[\]{}<>]+)");
     std::regex back_unwanted(R"([\"'„“°.,:;!?()\[\]{}<>]+$)");
 
-    // Zodziu ir nuorodu paieska
+    // Zodziu ir nuorodu paieska bei isvedimas
     string line;
     int lineNumber = 1;
     while (getline(input, line))
@@ -80,14 +80,15 @@ int main()
         }
     }
 
-    // Rezultatu isvedimas
-    cout << "-----------------------------------------------------------" << endl;
-    cout << "Skaiciavimai baigti." << endl;
-    cout << "Pasikartojantys zodziai issaugoti faile: Pasikartojimai.txt" << endl;
-    cout << "Nuorodos issaugotos faile: Nuorodos.txt" << endl;
-    cout << "-----------------------------------------------------------" << endl;
+    // Programos pabaiga
     input.close();
     wordsOutput.close();
     linksOutput.close();
+    cout << "-----------------------------------------------------------" << endl;
+    cout << "Skaiciavimai baigti." << endl;
+    cout << "Pasikartojantys zodziai issaugoti faile: pasikartojimai.txt" << endl;
+    cout << "Nuorodos issaugotos faile: nuorodos.txt" << endl;
+    cout << "-----------------------------------------------------------" << endl;
+    system("pause");
     return 0;
 }
