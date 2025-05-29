@@ -1,6 +1,5 @@
 #include "../include/global.h"
 #include "../include/links.h"
-#include <unordered_set>
 #include <map>
 #include <set>
 #include <cctype>
@@ -12,19 +11,19 @@ int main()
     ifstream input("tekstas.txt");
     if (!input.is_open())
     {
-        std::cerr << "Nepavyko atidaryti failo!" << endl;
+        cout << "Nepavyko atidaryti failo!" << endl;
         return 1;
     }
     ofstream wordsOutput("pasikartojimai.txt");
     ofstream linksOutput("nuorodos.txt");
 
     // Naudojami asociatyvus konteineriai ir regex
-    std::unordered_set<string> foundLinks;
+    std::set<string> foundLinks;
     std::map<string, int> wordCount;
     std::map<string, std::set<int>> wordLines;
     std::regex insideUnwanted(R"([\\/.|:*+=@!?#$%^&~`<>\",;\[\]])");
-    std::regex front_unwanted(R"(^[\"'„“°.,:;!?()\[\]{}<>]+)");
-    std::regex back_unwanted(R"([\"'„“°.,:;!?()\[\]{}<>]+$)");
+    std::regex frontUnwanted(R"(^[\"'„“°.,:;!?()\[\]{}<>]+)");
+    std::regex backUnwanted(R"([\"'„“°.,:;!?()\[\]{}<>]+$)");
 
     // Zodziu ir nuorodu paieska bei isvedimas
     string line;
@@ -45,8 +44,8 @@ int main()
         string word;
         while (iss >> word)
         {
-            word = std::regex_replace(word, front_unwanted, "");
-            word = std::regex_replace(word, back_unwanted, "");
+            word = std::regex_replace(word, frontUnwanted, "");
+            word = std::regex_replace(word, backUnwanted, "");
             if (std::regex_search(word, insideUnwanted))
             {
                 continue;
@@ -88,7 +87,8 @@ int main()
     cout << "Skaiciavimai baigti." << endl;
     cout << "Pasikartojantys zodziai issaugoti faile: pasikartojimai.txt" << endl;
     cout << "Nuorodos issaugotos faile: nuorodos.txt" << endl;
+    cout << "Paspauskite Enter, kad uzbaigtumete programos darba." << endl;
     cout << "-----------------------------------------------------------" << endl;
-    system("pause");
+	cin.get();
     return 0;
 }
